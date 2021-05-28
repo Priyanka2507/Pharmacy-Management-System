@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Home</title>
+</head>
+
+<body>
+    <h1>Home</h1>
+    <br>
+    <h1><a href='/Home/user'>Find All Users</a></h1>
+    <br>
+    <h1><a href='/Home/pres'>Add Prescription</a></h1>
+    <br>
+    <h1>Your Prescription</h1>
+    <form action="/Home/seepres" method="POST">
+        <div>
+            <label class="flex font-medium items-center md:justify-start justify-center text-gray-900"
+                for="userId">UserId :
+            </label>
+            <input type="number" id="userId" name="userId" required>
+            <button
+                class="text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
+                type="submit">Enter
+            </button>
+        </div>
+    </form>
+    <br>
+    <h1><a href='/Home/Med'>Find Medicines</a></h1>
+    <br>
+    <h1><a href='/Home/inventory'>Find Medicines Stock</a></h1>
+    <br>
+    <h1>Search using drugId</h1>
+    <form action="/Home/drug" method="POST">
+        <div>
+            <label class="flex font-medium items-center md:justify-start justify-center text-gray-900"
+                for="drugId">DrugId :
+            </label>
+            <input type="number" id="drugId" name="drugId" required>
+            <button
+                class="text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
+                type="submit">Enter
+            </button>
+        </div>
+    </form>
+    <br>
+    <h1>Search Drug by Cause</h1>
+    <form action="/Home/drugCause" method="POST">
+        <div>
+            <label class="flex font-medium items-center md:justify-start justify-center text-gray-900" for="cause">Cause
+                :
+            </label>
+            <input type="text" id="cause" name="cause" required>
+            <button
+                class="text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
+                type="submit">Enter
+            </button>
+        </div>
+    </form>
+    <br>
+    <h1><a href='/Home/order'>Order Medicines</a></h1>
+    <br>
+    <h1>Check Order using userId</h1>
+    <form action="/Home/seeorder" method="POST">
+        <div>
+            <label class="flex font-medium items-center md:justify-start justify-center text-gray-900"
+                for="userId">userId :
+            </label>
+            <input type="number" id="userId" name="userId" required>
+            <button
+                class="text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
+                type="submit">Enter
+            </button>
+        </div>
+    </form>
+    <br>
+    <h1>Check Order using orderId</h1>
+    <form action="/Home/seeorderId" method="POST">
+        <div>
+            <label class="flex font-medium items-center md:justify-start justify-center text-gray-900"
+                for="orderId">orderId :
+            </label>
+            <input type="number" id="orderId" name="orderId" required>
+            <button
+                class="text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
+                type="submit">Enter
+            </button>
+        </div>
+    </form>
+    <br>
+    <a href='/Home/payment'><h1>Pay Here</h1></a>
+    <br>
+    <h1>Check Payment Status/Details</h1>
+    <form action="/Home/seePay" method="POST">
+        <div>
+            <label class="flex font-medium items-center md:justify-start justify-center text-gray-900"
+                for="orderId">orderId :
+            </label>
+            <input type="number" id="orderId" name="orderId" required>
+            <button
+                class="text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
+                type="submit">Enter
+            </button>
+        </div>
+    </form>
+    <br>
+
+    <button><a href="/">LogOut</a></button>
+</body>
+
+</html>

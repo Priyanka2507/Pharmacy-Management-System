@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Order</title>
+</head>
+
+<body>
+    <div
+        class=" shadow-2xl bg-gray-500 lg:w-1/2 md:w-1/2 flex flex-col md:m-auto lg:m=auto md:mt-20 lg:mt-20 lg:mb-20 md:mb-20  md:p-8 ">
+        <h2 class="text-gray-900 text-4xl title-font font-black mb-3 text-center">Place your Order!</h2>
+        <br>
+        <form action="/Home/payment" method="POST">
+            <br>
+            <div class="flex flex-col w-full">
+                <label class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+                    for="userId">UserId : </label>
+                <input
+                    class="bg-white rounded border border-gray-400 focus:outline-none focus:border-teal-500 text-base px-4 py-2 mb-4 w-100"
+                    type="number" id="userId" name="userId" required>
+            </div>
+            <div class="flex flex-col ">
+                <label class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+                    for="orderId">Order Id : </label>
+                <input
+                    class="bg-white rounded border border-gray-400 focus:outline-none focus:border-teal-500 text-base px-4 py-2 mb-4 w-100"
+                    type="number" id="orderId" name="orderId" required>
+            </div>
+            <div class="flex flex-col w-full">
+                <label class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
+                    for="mode">Payment Mode : </label>
+                <input
+                    class="bg-white rounded border border-gray-400 focus:outline-none focus:border-teal-500 text-base px-4 py-2 mb-4 w-100"
+                    type="text" id="mode" name="mode" required>
+            </div>
+            <br>
+            <button
+                class="text-white bg-teal-500 border-0 py-2 px-6 focus:outline-none hover:bg-teal-600 rounded text-lg"
+                type="submit" id="pay">Pay</button>
+        </form>
+        <br>
+        <a href="/Home"
+            class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900 justify-center">Home</a>
+    </div>
+
+</body>
+
+</html>
